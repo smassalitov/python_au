@@ -1,4 +1,4 @@
-+ [Palindrome Linked List](#Palindrome Linked List)
++ [Palindrome Linked List](#Palindrome-Linked-List)
 + [Reverse Linked List](#Reverse Linked List)
 + [Middle of the Linked List](#Middle of the Linked List)
 + [Merge Two Sorted Lists](#Merge Two Sorted Lists)
