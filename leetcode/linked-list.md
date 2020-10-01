@@ -3,7 +3,7 @@
 + [Middle of the Linked List](Middle of the Linked List)
 + [Merge Two Sorted Lists](Merge Two Sorted Lists)
 
-##Palindrome Linked List
+## Palindrome Linked List
 https://leetcode.com/problems/palindrome-linked-list/
 ```python
 class Solution:
@@ -41,7 +41,7 @@ class Solution:
             secondHalf = secondHalf.next
         return check
 ```
-##Reverse Linked List
+## Reverse Linked List
 https://leetcode.com/problems/reverse-linked-list/
 ```python
 class Solution:
@@ -58,7 +58,7 @@ class Solution:
         head = previous_element
         return head
 ```
-##Middle of the Linked List
+## Middle of the Linked List
 https://leetcode.com/problems/middle-of-the-linked-list/
 ```python
 class Solution:
@@ -75,7 +75,7 @@ class Solution:
         for i in range(newhead - 1):
             middle_element = middle_element.next
 ```
-##Merge Two Sorted Lists
+## Merge Two Sorted Lists
 https://leetcode.com/problems/merge-two-sorted-lists/
 ```python
 class Solution:
