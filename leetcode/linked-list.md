@@ -1,7 +1,7 @@
-+ [Palindrome Linked List](Palindrome Linked List)
-+ [Reverse Linked List](Reverse Linked List)
-+ [Middle of the Linked List](Middle of the Linked List)
-+ [Merge Two Sorted Lists](Merge Two Sorted Lists)
++ [Palindrome Linked List](#Palindrome Linked List)
++ [Reverse Linked List](#Reverse Linked List)
++ [Middle of the Linked List](#Middle of the Linked List)
++ [Merge Two Sorted Lists](#Merge Two Sorted Lists)
 
 ## Palindrome Linked List
 https://leetcode.com/problems/palindrome-linked-list/
