@@ -4,6 +4,7 @@
 + [Middle of the Linked List](#Middle-of-the-Linked-List)
 + [Merge Two Sorted Lists](#Merge-Two-Sorted-Lists)
 + [ Remove Nth Node From End of List](#Remove-Nth-Node-From-End-of-List)
++ [ Reorder List](#Reorder-List)
 
 ## Palindrome Linked List
 https://leetcode.com/problems/palindrome-linked-list/
@@ -110,4 +111,28 @@ class Solution:
                 count += 1
             result.next = result.next.next
         return head
+```
+##  Reorder List
+https://leetcode.com/problems/reorder-list/
+```python
+class Solution:
+    def reorderList(self, head):
+        if not (head or head.next):
+            return
+        result = []
+        MidIndex = head
+        LastIndex = MidIndex.next
+        while (LastIndex and LastIndex.next):
+            MidIndex = MidIndex.next
+            LastIndex = LastIndex.next.next
+        Current_element = MidIndex.next
+        MidIndex.next = None
+        while (Current_element):
+            result.append(Current_element)
+            Current_element = Current_element.next
+        Current_element = head
+        while (len(result) > 0):
+            result[-1].next = Current_element.next
+            Current_element.next = result.pop()
+            Current_element = Current_element.next.next
 ```
