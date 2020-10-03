@@ -43,5 +43,4 @@ def PrintMarkDown(all_lines):
     print(GetUrl(all_lines), file = fout)
     GetCode(all_lines)
     
-    
 PrintMarkDown(all_lines)
