@@ -19,13 +19,19 @@ def GetName(all_lines):
     name = ''.join(name_list)
     name1 =  "-".join(name.split())
     return [name, name1]
+
+
 def GetUrl(all_lines):
     return all_lines[1]
+
+
 def GetCode(all_lines):
     print('```python', file=fout)
     for i in range(2, len(all_lines)):
         print(all_lines[i], file=fout)
     print('```', file=fout)
+    
+    
 def PrintMarkDown(all_lines):
     for i in range(len(all_linked_lines)):
         if all_linked_lines[i] == '':
