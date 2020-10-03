@@ -1,10 +1,3 @@
-with open("source_leetcode_data.txt", 'r') as fin:
-    all_lines = fin.read().splitlines()
-with open('linked-list.md', 'r') as fin:
-    all_linked_lines = fin.read().splitlines()
-fout = open("linked-list.md", "w")
-
-
 def GetName(all_lines):
     name = all_lines[0]
     name_list = list(name)
@@ -32,6 +25,13 @@ def GetCode(all_lines):
     print('```', file=fout)
     
     
+with open("source_leetcode_data.txt", 'r') as fin:
+    all_lines = fin.read().splitlines()
+with open('linked-list.md', 'r') as fin:
+    all_linked_lines = fin.read().splitlines()
+fout = open("linked-list.md", "w")
+
+
 def PrintMarkDown(all_lines):
     for i in range(len(all_linked_lines)):
         if all_linked_lines[i] == '':
