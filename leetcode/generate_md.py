@@ -23,13 +23,6 @@ def GetCode(all_lines):
     for i in range(2, len(all_lines)):
         print(all_lines[i], file=fout)
     print('```', file=fout)
-    
-    
-with open("source_leetcode_data.txt", 'r') as fin:
-    all_lines = fin.read().splitlines()
-with open('linked-list.md', 'r') as fin:
-    all_linked_lines = fin.read().splitlines()
-fout = open("linked-list.md", "w")
 
 
 def PrintMarkDown(all_lines):
@@ -43,4 +36,10 @@ def PrintMarkDown(all_lines):
     print(GetUrl(all_lines), file = fout)
     GetCode(all_lines)
     
+    
+with open("source_leetcode_data.txt", 'r') as fin:
+    all_lines = fin.read().splitlines()
+with open('linked-list.md', 'r') as fin:
+    all_linked_lines = fin.read().splitlines()
+fout = open("linked-list.md", "w")    
 PrintMarkDown(all_lines)
