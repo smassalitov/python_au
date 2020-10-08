@@ -5,6 +5,7 @@
 + [Merge Two Sorted Lists](#Merge-Two-Sorted-Lists)
 + [ Remove Nth Node From End of List](#Remove-Nth-Node-From-End-of-List)
 + [ Reorder List](#Reorder-List)
++ [ Linked List Cycle II](#Linked-List-Cycle-II)
 
 ## Palindrome Linked List
 https://leetcode.com/problems/palindrome-linked-list/
@@ -135,4 +136,16 @@ class Solution:
             result[-1].next = Current_element.next
             Current_element.next = result.pop()
             Current_element = Current_element.next.next
+```
+##  Linked List Cycle II
+https://leetcode.com/problems/linked-list-cycle-ii/discuss/813244/Python-3-Using-Set
+```python
+class Solution:
+    def detectCycle(self, head):
+        visited_nodes=set()
+        while head:
+            if head in visited_nodes:
+                return head
+            visited_nodes.add(head)
+            head=head.next
 ```
