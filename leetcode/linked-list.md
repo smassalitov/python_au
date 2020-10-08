@@ -6,6 +6,7 @@
 + [ Remove Nth Node From End of List](#Remove-Nth-Node-From-End-of-List)
 + [ Reorder List](#Reorder-List)
 + [ Linked List Cycle II](#Linked-List-Cycle-II)
++ [ Linked List Cycle](#Linked-List-Cycle)
 
 ## Palindrome Linked List
 https://leetcode.com/problems/palindrome-linked-list/
@@ -142,10 +143,23 @@ https://leetcode.com/problems/linked-list-cycle-ii/discuss/813244/Python-3-Using
 ```python
 class Solution:
     def detectCycle(self, head):
-        visited_nodes=set()
+        visited_nodes=set() 
         while head:
             if head in visited_nodes:
                 return head
             visited_nodes.add(head)
             head=head.next
+```
+##  Linked List Cycle
+https://leetcode.com/problems/linked-list-cycle/
+```python
+class Solution:
+    def hasCycle(self, head):
+        visited_nodes=set()
+        while head:
+            if head in visited_nodes:
+                return True
+            visited_nodes.add(head)
+            head=head.next
+        return False
 ```
