@@ -139,7 +139,7 @@ class Solution:
             Current_element = Current_element.next.next
 ```
 ##  Linked List Cycle II
-https://leetcode.com/problems/linked-list-cycle-ii/discuss/813244/Python-3-Using-Set
+https://leetcode.com/problems/linked-list-cycle-ii/
 ```python
 class Solution:
     def detectCycle(self, head):
