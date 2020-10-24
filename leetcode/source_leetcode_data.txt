@@ -1,5 +1,5 @@
-69. Sqrt(x)
-https://leetcode.com/problems/sqrtx/
+344. Reverse String
+https://leetcode.com/problems/reverse-string/
 class Solution(object):
-    def mySqrt(self, x):
-        return str(x**0.5).split(".")[0]
+    def reverseString(self, s):
+        s = s.reverse()

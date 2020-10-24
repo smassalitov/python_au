@@ -6,6 +6,7 @@
 + [ Largest Perimeter Triangle](#Largest-Perimeter-Triangle)
 + [ Sqrt(x)](#Sqrt(x))
 
+
 ##  Palindrome Number
 https://leetcode.com/problems/palindrome-number/
 ```python
@@ -40,7 +41,7 @@ class Solution:
         for i in range (1, n + 1):
             if(i % 5 == 0 and i% 3 == 0):
                 res.append("FizzBuzz")
-            elif(i % 3 == 0):
+            elif(i % 3 == 0):``
                 res.append("Fizz")
             elif(i % 5 == 0):
                 res.append("Buzz")
@@ -95,3 +96,4 @@ class Solution(object):
     def mySqrt(self, x):
         return str(x**0.5).split(".")[0]
 ```
+

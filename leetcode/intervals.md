@@ -1,4 +1,4 @@
-# Intervals
+    # Intervals
 + [Non-overlapping Intervals](#Non-overlapping-Intervals)
 + [Merge Intervals](#Merge-Intervals)
 + [Insert Interval](#Insert-Interval)

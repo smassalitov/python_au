@@ -39,7 +39,7 @@ def PrintMarkDown(all_lines):
 
 with open("source_leetcode_data.txt", 'r') as fin:
     all_lines = fin.read().splitlines()
-with open('math.md', 'r') as fin:
+with open('string.md', 'r') as fin:
     all_linked_lines = fin.read().splitlines()
-fout = open("math.md", "w")
+fout = open("string.md", "w")
 PrintMarkDown(all_lines)
