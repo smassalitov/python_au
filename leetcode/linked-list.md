@@ -119,7 +119,7 @@ https://leetcode.com/problems/reorder-list/
 ```python
 class Solution:
     def reorderList(self, head):
-        if not (head or head.next):
+        if not head or not head.next:
             return
         result = []
         MidIndex = head
@@ -133,7 +133,9 @@ class Solution:
             result.append(Current_element)
             Current_element = Current_element.next
         Current_element = head
-        while (Current_element != None):
+        while ((Current_element != None)):
+            if len(result) == 0:
+                return
             result[-1].next = Current_element.next
             Current_element.next = result.pop()
             Current_element = Current_element.next.next
