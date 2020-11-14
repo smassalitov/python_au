@@ -133,7 +133,7 @@ class Solution:
             result.append(Current_element)
             Current_element = Current_element.next
         Current_element = head
-        while (len(result) > 0):
+        while (Current_element != None):
             result[-1].next = Current_element.next
             Current_element.next = result.pop()
             Current_element = Current_element.next.next
