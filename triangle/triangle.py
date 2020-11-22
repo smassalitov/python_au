@@ -87,10 +87,12 @@ def main():
     fin = open(sys.argv[1], 'r')
     fout = open(sys.argv[2], 'w')
     all_lines = fin.read().splitlines()
-    max_line_number, max_square = get_biggest_square(set_squares(all_lines))
-    if max_line_number != -1:
-        print(all_lines[max_line_number], file=fout)
-
+    try:
+        max_line_number, max_square = get_biggest_square(set_squares(all_lines))
+        if max_line_number != -1:
+            print(all_lines[max_line_number], file=fout)
+    except:
+        print('Error')
 
 if __name__ == "__main__":
     main()
