@@ -117,6 +117,8 @@ class MyLinkedList:
                     result += key
             current_node_num1 = current_node_num1.next
             current_node_num2 = current_node_num2.next
+        if mem_rank == 1:
+            result += str(mem_rank)
         return MyLinkedList(result)
 
 
@@ -140,7 +142,7 @@ def check_nulls(num):
 
 
 hex_dictionary = dict([('0', 0), ('1', 1), ('2', 2), ('3', 3), ('4', 4), ('5', 5), ('6', 6), ('7', 7), ('8', 8),
-                       ('9', 9), ('A', 10), ('B', 11), ('C', 12), ('D', 13), ('E', 14), ('F', 15)])
+                           ('9', 9), ('A', 10), ('B', 11), ('C', 12), ('D', 13), ('E', 14), ('F', 15)])
 
 
 def main():
