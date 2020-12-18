@@ -1,5 +1,17 @@
-344. Reverse String
-https://leetcode.com/problems/reverse-string/
+101. Symmetric Tree
+https://leetcode.com/problems/symmetric-tree/
 class Solution(object):
-    def reverseString(self, s):
-        s = s.reverse()
+    def isSymmetric(self, root):
+        if not root:
+            return True
+        def isMirror(left_kid, right_kid):
+            if not left_kid and not right_kid:
+                return True
+            if (left_kid and not right_kid) or (right_kid and not left_kid) or (right_kid.val != left_kid.val):
+                return False
+            if not isMirror(right_kid.left, left_kid.right):
+                return False
+            if not isMirror(right_kid.right, left_kid.left):
+                return False
+            return True
+        return isMirror(root.left, root.right)
