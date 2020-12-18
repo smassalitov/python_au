@@ -145,7 +145,7 @@ https://leetcode.com/problems/linked-list-cycle-ii/
 ```python
 class Solution:
     def detectCycle(self, head):
-        visited_nodes=set() 
+        visited_nodes=set()
         while head:
             if head in visited_nodes:
                 return head
