@@ -74,12 +74,6 @@ class MyLinkedList:
                     count += 1
                 previous_node.next = current_node.next
 
-    def __init__(self, string):
-        self.head = None
-        self.length = 0
-        for i in range(len(string)):
-            self.add_at_head(string[i])
-
     def print_linked_list(self):
         current_node = self.head
         while current_node:
@@ -97,26 +91,17 @@ class MyLinkedList:
     def __iter__(self):
         current = self.head
         while current is not None:
-            yield current.value
-        current = current.next
-
-    def __add__(self, reversed_linked_num):
-        if type(reversed_linked_num) != MyLinkedList:
-            return
-        result = ''
-        current_node_num1 = self.head
-        current_node_num2 = reversed_linked_num.head
-        while current_node_num1:
-            if not current_node_num1.next:
-                current_node_num1.next = current_node_num2
-                return current_node_num1
-            current_node_num1.next
+            yield current.val
+            current = current.next
 
 
 def main():
-    num = input()
-    lst = MyLinkedList(num)
-    lst.print_linked_list()
+    lst = MyLinkedList()
+    lst.add_at_tail(3)
+    lst.add_at_tail(5)
+    lst.add_at_tail(7)
+    for num in lst:
+        print(num)
 
 
 if __name__ == "__main__":
