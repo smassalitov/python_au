@@ -91,7 +91,7 @@ class MyLinkedList:
     def __iter__(self):
         current = self.head
         while current is not None:
-            yield current.val
+            yield current.val #Идём по списку - присваем current.val
             current = current.next
 
 
