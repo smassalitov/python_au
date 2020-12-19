@@ -1,5 +1,5 @@
 import unittest
-from leetcode.generate_md import GetName, GetUrl, GetCode, PrintMarkDown
+from leetcode.generate_md import *
 
 
 class TestGenerator(unittest.TestCase):

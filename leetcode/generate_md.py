@@ -1,4 +1,4 @@
-def GetName(all_lines):
+def get_name(all_lines):
     name = all_lines[0]
     name_list = list(name)
     name_list[0] = ''
@@ -14,27 +14,27 @@ def GetName(all_lines):
     return [name, name1]
 
 
-def GetUrl(all_lines):
+def get_url(all_lines):
     return all_lines[1]
 
 
-def GetCode(all_lines, fout):
+def get_code(all_lines, fout):
     print('```python', file=fout)
     for i in range(2, len(all_lines)):
         print(all_lines[i], file=fout)
     print('```', file=fout)
 
 
-def PrintMarkDown(all_lines, all_linked_lines, fout):
+def print_mark_down(all_lines, all_linked_lines, fout):
     for i in range(len(all_linked_lines)):
         if all_linked_lines[i] == '':
-            all_linked_lines.insert(i, '+ [{}](#{})'.format(GetName(all_lines)[0], GetName(all_lines)[1]))
+            all_linked_lines.insert(i, '+ [{}](#{})'.format(get_name(all_lines)[0], get_name(all_lines)[1]))
             break
     for i in all_linked_lines:
         print(i, file=fout)
-    print('## ' + str(GetName(all_lines)[0]), file=fout)
-    print(GetUrl(all_lines), file=fout)
-    GetCode(all_lines, fout)
+    print('## ' + str(get_name(all_lines)[0]), file=fout)
+    print(get_url(all_lines), file=fout)
+    get_code(all_lines, fout)
 
 
 def main():
@@ -43,7 +43,7 @@ def main():
     with open('test_out.md', 'r') as fin:
         all_linked_lines = fin.read().splitlines()
     fout = open("test_out.md", "w")
-    PrintMarkDown(all_lines, all_linked_lines, fout)
+    print_mark_down(all_lines, all_linked_lines, fout)
 
 if __name__ == "__main__":
     main()
